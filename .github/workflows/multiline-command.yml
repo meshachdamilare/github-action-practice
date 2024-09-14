@@ -1,9 +1,9 @@
-name: Multi-line Command and 3rd Paty Libaries
+name: Multi-line Command
 
 on: push
 
 jobs:
-    first_job:
+    second_job:
         runs-on: ubuntu-latest
         steps:
         - name: Checkout Repo
@@ -15,7 +15,4 @@ jobs:
             ls -ltra
             cat README.md
         
-        - name: Generate ASCII Artworks
-          run: cowsay -f dragon "Run for cover ... I am a Dragon... RAWR" >> dragon.txt
-
       
