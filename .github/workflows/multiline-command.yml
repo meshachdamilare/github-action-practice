@@ -1,0 +1,21 @@
+name: Multi-line Command and 3rd Paty Libaries
+
+on: push
+
+jobs:
+    first_job:
+        runs-on: ubuntu-latest
+        steps:
+        - name: Checkout Repo
+          uses: actions/checkout@v4
+          
+        - name: List and Read file
+          run: |
+            echo "My first Github Action Job"
+            ls -ltra
+            cat README.md
+        
+        - name: Generate ASCII Artworks
+          run: cowsay -f dragon "Run for cover ... I am a Dragon... RAWR" >> dragon.txt
+
+      
